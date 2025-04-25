@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion - BNP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login">
+    <div class="login-box">
+        <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/9/99/BNP_Paribas.svg/1280px-BNP_Paribas.svg.png" alt="Logo BNP" class="logo">
+        <input type="text" id="username" placeholder="Identifiant :">
+        <input type="password" id="password" placeholder="Mot de passe :">
+        <button onclick="login()">Se connecter</button>
+        <p id="error" class="error-msg"></p>
+    </div>
+    <script>
+        function login() {
+            var user = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+            if (user === "lineGustavot" && pass === "linne1989") {
+                window.location.href = "compte.html";
+            } else {
+                document.getElementById("error").innerText = "Identifiant ou mot de passe incorrect.";
+            }
+        }
+    </script>
+</body>
+</html>
